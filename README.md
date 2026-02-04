@@ -1,84 +1,88 @@
-# Dashboard Streamlit
+# Streamlit Dashboard
 
-Dashboard interativo desenvolvido com Streamlit para visualização de dados e métricas.
+Interactive dashboard developed with Streamlit for data visualization and metrics monitoring.
 
-## Estrutura do Projeto
+## Project Structure
 
 ```
 streamlit-dashboard/
-├── app.py                      # Arquivo principal da aplicação
-├── pages/                      # Páginas do dashboard
+├── app.py                      # Main application file
+├── pages/                      # Dashboard pages
 │   ├── __init__.py
-│   ├── home.py                # Página inicial
-│   ├── analytics.py           # Página de analytics
-│   ├── reports.py             # Página de relatórios
-│   └── settings.py            # Página de configurações
-├── utils/                      # Utilitários
+│   ├── home.py                # Home page
+│   ├── analytics.py           # Analytics page
+│   ├── reports.py             # Reports page
+│   └── settings.py            # Settings page
+├── utils/                      # Utilities
 │   ├── __init__.py
-│   ├── data_loader.py         # Funções para carregar dados
-│   └── charts.py              # Funções para criar gráficos
+│   ├── data_loader.py         # Data loading functions
+│   └── charts.py              # Chart creation functions
 ├── .streamlit/
-│   └── config.toml            # Configurações do Streamlit
-├── requirements.txt           # Dependências do projeto
-└── README.md                  # Este arquivo
+│   └── config.toml            # Streamlit configuration
+├── requirements.txt           # Project dependencies
+└── README.md                  # This file
 ```
 
-## Funcionalidades
+## Features
 
-- 🏠 **Home**: Visão geral com métricas principais e gráficos resumidos
-- 📈 **Analytics**: Análises detalhadas com filtros e visualizações avançadas
-- 📄 **Relatórios**: Geração e exportação de relatórios em CSV/Excel
-- ⚙️ **Configurações**: Personalização de aparência, notificações e perfil
+* 🏠 **Home**: Overview with key metrics and summary charts
+* 📈 **Analytics**: Detailed analysis with filters and advanced visualizations
+* 📄 **Reports**: Report generation and export to CSV/Excel
+* ⚙️ **Settings**: Customization of appearance, notifications, and user profile
 
-## Instalação
+## Installation
 
-1. Clone o repositório ou navegue até a pasta do projeto
+1. Clone the repository or navigate to the project folder
 
-2. Instale as dependências:
+2. Install the dependencies:
+
 ```bash
 pip install -r requirements.txt
 ```
 
-## Como Executar
+## How to Run
 
-Execute o dashboard com o comando:
+Run the dashboard with the command:
 
 ```bash
 streamlit run app.py
 ```
 
-O dashboard será aberto automaticamente no navegador em `http://localhost:8501`
+The dashboard will automatically open in your browser at `http://localhost:8501`
 
-## Personalização
+## Customization
 
-### Adicionar Nova Página
+### Add a New Page
 
-1. Crie um novo arquivo em `pages/`, exemplo: `pages/nova_pagina.py`
-2. Implemente a função `show()`:
+1. Create a new file inside `pages/`, for example: `pages/new_page.py`
+2. Implement the `show()` function:
+
 ```python
 import streamlit as st
 
 def show():
-    st.title("Nova Página")
-    st.write("Conteúdo da página")
+    st.title("New Page")
+    st.write("Page content")
 ```
-3. Importe e adicione no `app.py`
 
-### Modificar Tema
+3. Import and register it in `app.py`
 
-Edite o arquivo `.streamlit/config.toml` para alterar cores e aparência
+### Change Theme
 
-### Conectar Dados Reais
+Edit the `.streamlit/config.toml` file to customize colors and appearance
 
-Modifique as funções em `utils/data_loader.py` para carregar dados de:
-- Bancos de dados (PostgreSQL, MySQL, MongoDB)
-- APIs
-- Arquivos (CSV, Excel, JSON)
-- Data warehouses
+### Connect Real Data Sources
 
-## Tecnologias
+Update the functions in `utils/data_loader.py` to load data from:
 
-- **Streamlit**: Framework principal
-- **Pandas**: Manipulação de dados
-- **Plotly**: Gráficos interativos
-- **NumPy**: Operações numéricas
+* Databases (PostgreSQL, MySQL, MongoDB)
+* APIs
+* Files (CSV, Excel, JSON)
+* Data warehouses
+
+## Technologies
+
+* **Streamlit**: Main framework
+* **Pandas**: Data manipulation
+* **Plotly**: Interactive visualizations
+* **NumPy**: Numerical operations
